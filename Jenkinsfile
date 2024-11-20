@@ -20,7 +20,7 @@ pipeline {
                 cd /Users/sallywong/Documents/Sally/classes/kodekloud/jenkins
                 source jenkins/bin/activate
                 pip install -r requirements.txt"
-                """"
+                """
             }
         }
         stage('Test') {
