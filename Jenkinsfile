@@ -11,8 +11,9 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/sywong10/Jenkins-project', branch: 'main'
-                sh "ls -ltr"
+                dir('/Users/sallywong/Documents/Sally/classes/kodekloud/jenkins/out/')
+                    git url: 'https://github.com/sywong10/Jenkins-project', branch: 'main'
+                    sh "ls -ltr"
             }
         }
         stage('Setup') {
@@ -20,11 +21,12 @@ pipeline {
                 sh """
                 export PATH=$PATH:/Users/sallywong/Documents/Sally/classes/kodekloud/jenkins/jenkins/bin
                 echo $PATH
+                cd /Users/sallywong/Documents/Sally/classes/kodekloud/jenkins
+                python3 -m venv jenkins2
+                source jenkins2/bin/activate
                 which python
                 which pip
                 pip --version
-                cd /Users/sallywong/Documents/Sally/classes/kodekloud/jenkins
-                source jenkins/bin/activate
                 pip install -r requirements.txt
                 """
             }
