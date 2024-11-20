@@ -11,16 +11,17 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                dir('/Users/sallywong/Documents/Sally/classes/kodekloud/jenkins/out/')
+                dir('/Users/sallywong/Documents/Sally/classes/kodekloud/jenkins/out/') {
                     git url: 'https://github.com/sywong10/Jenkins-project', branch: 'main'
                     sh "ls -ltr"
+                   }
             }
         }
         stage('Setup') {
             steps {
                 sh """
-                export PATH=$PATH:/Users/sallywong/Documents/Sally/classes/kodekloud/jenkins/jenkins/bin
-                echo $PATH
+                export PATH=\$PATH:/Users/sallywong/Documents/Sally/classes/kodekloud/jenkins/jenkins/bin
+                echo \$PATH
                 cd /Users/sallywong/Documents/Sally/classes/kodekloud/jenkins
                 python3 -m venv jenkins2
                 source jenkins2/bin/activate
