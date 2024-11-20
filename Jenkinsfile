@@ -4,7 +4,7 @@ pipeline {
         IMAGE_NAME = 'sanjeevkt720/jenkins-flask-app'
         IMAGE_TAG = "${IMAGE_NAME}:${env.BUILD_NUMBER}"
 //         KUBECONFIG = credentials('kubeconfig-credentials-id')
-// test, let's do it again
+// test, let's do it again, one more time
 
     }
     stages {
