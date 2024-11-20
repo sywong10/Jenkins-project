@@ -16,7 +16,11 @@ pipeline {
         }
         stage('Setup') {
             steps {
-                sh "pip install -r requirements.txt"
+                sh """
+                cd /Users/sallywong/Documents/Sally/classes/kodekloud/jenkins
+                source jenkins/bin/activate
+                pip install -r requirements.txt"
+                """"
             }
         }
         stage('Test') {
