@@ -26,6 +26,7 @@ pipeline {
                 python3 -m venv jenkins2
                 source jenkins2/bin/activate
                 which python
+                python -m pip install --upgrade pip
                 which pip
                 pip --version
                 pip install -r /Users/sallywong/Documents/Sally/classes/kodekloud/jenkins/out/requirements.txt
