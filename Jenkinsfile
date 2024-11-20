@@ -18,9 +18,13 @@ pipeline {
         stage('Setup') {
             steps {
                 sh """
-                cd /Users/sallywong/Documents/Sally/classes/kodekloud/jenkins
-                source jenkins/bin/activate
-                pip install -r requirements.txt
+                echo $PATH
+                which python
+                which pip
+                pip --version
+//                 cd /Users/sallywong/Documents/Sally/classes/kodekloud/jenkins
+//                 source jenkins/bin/activate
+//                 pip install -r requirements.txt
                 """
             }
         }
