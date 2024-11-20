@@ -18,7 +18,7 @@ pipeline {
         stage('Setup') {
             steps {
                 sh """
-                export PATH=$PATH:/Users/sallywong/Documents/Sally/classes/kodekloud/jenkins/jenkins/bin/python
+                export PATH=$PATH:/Users/sallywong/Documents/Sally/classes/kodekloud/jenkins/jenkins/bin
                 echo $PATH
                 which python
                 which pip
