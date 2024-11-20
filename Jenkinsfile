@@ -23,9 +23,9 @@ pipeline {
                 which python
                 which pip
                 pip --version
-//                 cd /Users/sallywong/Documents/Sally/classes/kodekloud/jenkins
-//                 source jenkins/bin/activate
-//                 pip install -r requirements.txt
+                cd /Users/sallywong/Documents/Sally/classes/kodekloud/jenkins
+                source jenkins/bin/activate
+                pip install -r requirements.txt
                 """
             }
         }
