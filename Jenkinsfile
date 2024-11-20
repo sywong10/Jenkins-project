@@ -28,7 +28,7 @@ pipeline {
                 which python
                 which pip
                 pip --version
-                pip install -r requirements.txt
+                pip install -r /Users/sallywong/Documents/Sally/classes/kodekloud/jenkins/out/requirements.txt
                 """
             }
         }
